@@ -1,0 +1,330 @@
+body {
+    font-family: system-ui;
+}
+
+h1,
+h2 { 
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+}
+
+mark{
+    border-radius: 5px;
+    padding: 3px;
+    background-color:transparent;
+    color: white;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 1) 0px 2px 16px 0px;
+    display: none;
+}
+
+#arrow1-para {
+    background-color: rgb(0, 110, 255);
+    border-radius: 50%;
+    opacity: 0;
+    animation: animationFadein 0.3s ease forwards;
+}
+
+#arrow1 {
+    opacity: 0;
+    animation: animationFadein 0.3s ease 0.3s forwards;
+}
+
+#arrow2-para {
+    background-color: rgb(187, 42, 223);
+    border-radius: 50%;
+    opacity: 0;
+    animation: animationFadein 0.3s ease 0.6s forwards;
+}
+
+#arrow2 {
+    opacity: 0;
+    animation: animationFadein 0.3s ease 0.9s forwards;
+}
+
+#arrow3-para {
+    background-color: rgb(16, 202, 193);
+
+    border-radius: 50%;
+    opacity: 0;
+    animation: animationFadein 0.3s ease 1.2s forwards;
+}
+
+#arrow3 {
+    opacity: 0;
+    animation: animationFadein 0.3s ease 1.5s forwards;
+}
+
+#para-4 {
+    background-color: rgb(209, 27, 27);
+    border-radius: 50%;
+    opacity: 0;
+    animation: animationFadein 0.3s ease 1.8s forwards;
+}
+
+#btn_toggle {
+    cursor: pointer;
+    padding: 20px;
+    background: rgb(28, 179, 41);
+    font-size: 25px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+#btn_toggle:hover {
+    transform: scale(1.1);
+    background: #0c8a08;
+}
+
+@keyframes animationFadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*  problem statement code starts here */
+.Pstatement {
+    padding: 10px;
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.Pstatement h1{
+    color: black;
+}
+
+
+/* theory div starts here */
+
+.theory {
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+/* precendece stack div starts */
+
+.Precedence_Stack {
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.btnStack{
+    width: 50%;
+    margin: 20px;
+    display: none;
+    }
+    .btn{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 10px;
+     }
+     .Precedence_Stack img{
+        margin: 0 auto;
+     }
+.Precedence_Stack button {
+    background-image: linear-gradient(to right top, #4c85db, #3ea2db, #13a0ad, #11ea93, #a8eb12);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 18px;
+    color: white;
+    border: none;
+}
+
+/* cascade example starts here */
+
+.cascade-example {
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.priority_cls {
+    font-size: 23px;
+    color: white;
+    border-radius: 3px;
+}
+
+.cascade-example img {
+    width: 40rem;
+    border-radius: 5px;
+}
+
+#highlight {
+    background-color: red;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    border-radius: 3px;
+}
+
+/* box model css*/
+.boxModel {
+    /* border: 2px solid orange; */
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+
+/* box model demonstration */
+.box1 {
+    border: 60px solid rgb(66, 202, 240);
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    font-size: 35px;
+    position: relative;
+}
+
+.box2 {
+    border: 60px solid rgb(73, 10, 231);
+    height: 70%;
+}
+
+.box3 {
+    border: 60px solid rgb(109, 59, 171);
+    height: 58%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 131, 67);
+    font-size: 50px;
+}
+
+.p {
+    position: absolute;
+    top: 65px;
+    left: 125px;
+    color: white;
+}
+
+.b {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    color: white;
+
+}
+
+.m {
+    position: absolute;
+    top: -55px;
+    color: white;
+
+}
+
+.last-div {
+    /* border: 2px solid; */
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+button{
+    /* border: none; */
+    cursor: pointer;
+    background-image: linear-gradient(to right top, #4c85db, #3ea2db, #13a0ad, #11ea93, #a8eb12);
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transition: all 0.3s ease;
+
+}
+button:hover{
+    transform: scale(1.1);
+    background: #11d1d8;
+}
+
+
+.ans1 {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    animation: come-in-out 0.5s ease;
+}
+
+.ans2 {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    animation: come-in-out 0.5s ease;
+
+}
+
+.ans3 {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    animation: come-in-out 0.5s ease;
+
+}
+
+.exm1 {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    animation: come-in-out 0.5s ease;
+
+}
+
+.exm2 {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    animation: come-in-out 0.5s ease;
+
+}
+
+.active {
+    display:block;
+}
+
+@keyframes come-in-out {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.btndemon {
+    background-image: linear-gradient(to right top, #4c85db, #3ea2db, #13a0ad, #11ea93, #a8eb12);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.btndemonDiv {
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}

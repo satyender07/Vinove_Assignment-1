@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Pstatement">
+        <h1>CSS Essentials - The Cascade and Box Model - <i>SATYENDER SINGH</i></h1>
+        <p>Q1. Define the CSS cascade and explain how it determines the priority of conflicting styles. Provide an
+            example
+            of
+            how specificity affects style application.</p>
+
+
+        <p>Q2. Explain the concept of the CSS box model. How does the box model affect the layout of elements on a
+            webpage?
+            Describe the properties that make up the box model.</p>
+
+        <p>Q3. Discuss the differences between the margin, border, padding, and content areas of an HTML element.
+            How do
+            these areas interact within the box model?</p>
+
+    </div>
+    <div class="theory">
+        <button class="btnq1">
+            <h2>Q1.Define the CSS cascade and explain how it determines the priority of conflicting styles Provide an
+                example of how specificity affects style application. <mark>click to see solution</mark></h2>
+        </button>
+        <div class="ans1">
+            <p>The CSS (Cascading Style Sheets) cascade refers to the process of combining and resolving conflicting
+                styles
+                that are applied to a specific HTML element on a web page. CSS styles can be defined in multiple ways,
+                such
+                as in an external stylesheet, within a &lt;Style&gt; tag in the HTML document, or directly inline on an
+                element. The cascade ensures that when there are conflicting styles, the final appearance of an element
+                is
+                determined in a systematic and predictable manner.</p>
+            <p>The cascade operates based on a set of rules that define the priority and specificity of styles. When
+                multiple styles target the same element and conflict with each other, the cascade decides which style
+                will
+                take precedence. The priority of conflicting styles is determined using the following factors, in order
+                of
+                importance:</p>
+
+            <ol>
+                <li><b style="color: blue;">Specificity:</b> Specificity refers to the level of detail in a selector. A
+                    more
+                    specific selector
+                    will
+                    override a less specific one. Specificity is calculated using four values:
+                    <ul>
+                        <li>Inline styles: These have the highest specificity and are applied directly within the HTML
+                            element using
+                            the style attribute.</li>
+                        <li>IDs: Selectors with IDs have a higher specificity than classes and tag names.</li>
+                        <li>Classes, attributes, and pseudo-classes: These selectors are of intermediate specificity.
+                        </li>
+                        <li>Tag names and pseudo-elements: These have the lowest specificity and affect all elements of
+                            a
+                            certain
+                            type.</li>
+                    </ul>
+                </li>
+                <li><b style="color: blue;">Important:</b> Adding the !important declaration to a style rule gives it
+                    the
+                    highest
+                    priority,
+                    overriding any conflicting styles regardless of specificity. However, it's recommended to use
+                    !important
+                    sparingly, as it can make the stylesheet harder to manage.</li>
+                <li><b style="color: blue;">Source Order:</b> When styles have the same specificity and none are marked
+                    as
+                    !important, the order
+                    in which they appear in the stylesheet matters. The style declared later in the stylesheet will take
+                    precedence over the earlier one.</li>
+            </ol>
+
+            <p>It's important to note that inheritance is also a part of the cascade. Some properties are inherited from
+                parent elements, meaning that a child element will inherit the property value of its parent if not
+                explicitly overridden. Inherited properties can also be overridden using the same specificity and source
+                order principles.</p>
+            <p>To summarize, the CSS cascade determines the priority of conflicting styles through a combination of
+                specificity, the !important declaration, and source order. Specificity is the most critical factor,
+                followed
+                by importance and source order. By understanding these principles, developers can effectively control
+                the
+                appearance of HTML elements and manage styles in a structured and organized manner.</p>
+        </div>
+    </div>
+    <div class="Precedence_Stack">
+        <button id="btn_toggle">click to check precedence Stack</button>
+        <div class="btnStack">
+            <p class="btn">Inline Styles</p>
+            <img class="btn" src="down-arrow.png" alt="" width="50px">
+            <p class="btn">ID Selectors</p>
+            <img class="btn" src="down-arrow.png" alt="" width="50px">
+            <p class="btn">Class, Attributes, and pseudo-classes</p>
+            <img class="btn" src="down-arrow.png" alt="" width="50px">
+            <p class="btn">Tag names and pseudo-elements</p>
+        </div>
+    </div>
+
+
+    <div class="cascade-example">
+        <button class="btnexample">
+            <p class="priority_cls" id="para1">Let's consider a scenario where we have
+                conflicting styles for a specific HTML element. In this example, we'll explore how specificity
+                determines
+                which style takes precedence.<mark>Expand</mark></p>
+                
+        </button>
+        <div class="exm1">
+            <img src="priority_ex.png" alt="">
+            <p id="highlight" style="background-color: violet;">This is a paragraph with confilting styles. inline color
+                is
+                given VIOLET which overshadowing all the other selectors like id=highlight id giving it a RED color, p
+                tag
+                etc.</p>
+        </div>
+    </div>
+
+    <div class="boxModel">
+        <button class="btnq2">
+            <h2>Q2. Explain the concept of the CSS box model. How does the box model affect the layout of elements on a
+                webpage? Describe the properties that make up the box model. <mark>click to see solution</mark></h2>
+        </button>
+        <div class="ans2">
+            <p>The CSS box model is a fundamental concept in web design and layout that defines how elements are
+                structured
+                and sized on a webpage. It conceptualizes HTML elements as rectangular boxes, each consisting of
+                content,
+                padding, border, and margin. These components work together to determine the overall dimensions and
+                spacing
+                of elements on a webpage.</p>
+            <p>The box model has a significant impact on how elements are positioned, sized, and interact with each
+                other in
+                a layout. It's crucial for understanding how various CSS properties influence the appearance and
+                arrangement
+                of content on a webpage.</p>
+            <p>The components of the CSS box model include:</p>
+            <ol>
+                <li>Content: This is the actual content of an element, such as text, images, videos, or other HTML
+                    elements.
+                    The content area's dimensions are defined by properties like width and height.</li>
+                <li>Padding: Padding is the space between the content and the element's border. It helps create space
+                    around
+                    the content, separating it from the border. Padding dimensions can be set using properties like
+                    padding-top, padding-right, padding-bottom, and padding-left.</li>
+                <li>Border: The border is a line that surrounds the padding and content of an element. It's used to
+                    visually
+                    separate elements and give them a distinct outline. Border properties include border-width,
+                    border-style, and border-color.</li>
+                <li>Margin: Margins are the space outside the element's border, creating a gap between neighboring
+                    elements.
+                    Margins help control the spacing between elements on a webpage. Margin dimensions can be set using
+                    properties like margin-top, margin-right, margin-bottom, and margin-left.</li>
+            </ol>
+            <p>The total width and height of an element are determined by adding the content width and height, the sum
+                of
+                horizontal and vertical padding, the sum of horizontal and vertical border widths, and the sum of
+                horizontal
+                and vertical margins.</p>
+            <p>The box model affects the layout of elements on a webpage in several ways:</p>
+            <ol>
+                <li>Sizing: The sum of content width and padding determines the element's total width. If borders are
+                    added,
+                    the border widths are included in the total width. Margins contribute to the spacing between
+                    elements.
+                </li>
+                <li>Spacing: Padding creates space between the content and the border, while margins create space
+                    between
+                    elements. Both contribute to the overall spacing and arrangement of elements on the page.</li>
+                <li>Positioning: The combination of content, padding, border, and margin defines the positioning of an
+                    element within its containing element or relative to other elements.</li>
+                <li>Box Dimensions: Understanding the box model is crucial for accurately sizing and positioning
+                    elements,
+                    especially when creating responsive designs that adapt to various screen sizes and devices.</li>
+            </ol>
+            <p>In summary, the CSS box model is a foundational concept that defines the structure, spacing, and layout
+                of
+                elements on a webpage. By manipulating properties related to content, padding, border, and margin, web
+                designers can control the appearance and arrangement of elements, creating visually appealing and
+                well-structured layouts.</p>
+        </div>
+    </div>
+    <div class="btndemonDiv">
+        <button class="btndemon">Click to see box model demonstration</button>
+        <div class="exm2">
+            <div class="box1">
+                <div class="box2">
+                    <div class="box3">
+                        content
+                    </div>
+                </div>
+                <span class="p">Padding</span>
+                <span class="b">Border</span>
+                <span class="m">Margin</span>
+            </div>
+        </div>
+    </div>
+    <div class="last-div">
+        <button class="btnq3">
+            <h2>Q3. Discuss the differences between the margin, border, padding, and content areas of an HTML element.
+                How
+                do these areas interact within the box model? <mark> click to see solution</mark></h2>
+        </button>
+        <div class="ans3">
+            <ol>
+                <li> <b> Content Area: </b>
+                    <ul>
+                        <li>The content area is where the actual content of the element, such as text, images, or other
+                            HTML
+                            elements, is displayed.</li>
+                        <li>Its dimensions are determined by properties like width and height.</li>
+                        <li>The content area does not include padding, border, or margin.</li>
+                    </ul>
+                </li>
+                <li> <b>Padding Area:</b>
+                    <ul>
+                        <li>The padding area is the space between the content area and the element's border.</li>
+                        <li>It provides space for adding visual distance between the content and the border, creating a
+                            buffer.</li>
+                        <li>Padding dimensions are set using properties like padding-top, padding-right, padding-bottom,
+                            and
+                            padding-left.</li>
+                    </ul>
+                </li>
+                <li><b>Border Area:</b>
+                    <ul>
+                        <li>The border area is the line that surrounds the content and padding areas. It defines the
+                            outermost boundary of the element.</li>
+                        <li>Borders can be styled using properties like border-width, border-style, and border-color.
+                        </li>
+                        <li>The border area's size contributes to the total width and height of the element.</li>
+                    </ul>
+                </li>
+                <li><b>Margin Area:</b>
+                    <ul>
+                        <li>The margin area is the space outside the element's border. It creates a gap between
+                            neighboring
+                            elements.</li>
+                        <li>Margins are used to control the spacing between elements on a webpage, preventing them from
+                            being too close.</li>
+                        <li>Margin dimensions are set using properties like margin-top, margin-right, margin-bottom, and
+                            margin-left.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p
+                style="background-image: linear-gradient(to right top, #4c85db, #3ea2db, #13a0ad, #11ea93, #a8eb12); text-align: center; width: fit-content; padding: 10px;">
+                Interactions within the Box Model:</p>
+            <ul>
+                <li>The total width and height of an element are determined by adding the content width and height,
+                    padding
+                    dimensions, border dimensions, and margin dimensions.</li>
+                <li>The padding area is contained within the content area. Padding extends from the content edge to the
+                    border edge.</li>
+                <li>The border area wraps around the content and padding areas. It includes the border itself and
+                    separates
+                    one element from another.</li>
+                <li>The margin area extends outside the border and provides space between elements.</li>
+                <li>When two adjacent elements have margins, the larger of the two margins usually takes precedence,
+                    effectively collapsing the smaller margin.</li>
+            </ul>
+            <p>In summary, the four areas of the box model—content, padding, border, and margin—work together to define
+                the
+                appearance, spacing, and layout of HTML elements. Understanding how these areas interact allows
+                designers
+                and developers to create precise and visually appealing layouts by controlling the dimensions and
+                positioning of elements on a webpage.</p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
